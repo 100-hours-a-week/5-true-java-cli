@@ -1,8 +1,8 @@
 package com.flowerstore.model;
 
 /**
- * Order 클래스는 사용자의 주문 정보를 관리하는 클래스입니다.
- * 꽃, 포장 타입, 포장 추가 여부 및 추가 포장 옵션을 포함합니다.
+ * Order 클래스는 사용자의 주문 정보를 관리하는 클래스
+ * 꽃, 포장 타입, 포장 추가 여부 및 추가 포장 옵션을 포함
  */
 public class Order {
     private Flower flower;

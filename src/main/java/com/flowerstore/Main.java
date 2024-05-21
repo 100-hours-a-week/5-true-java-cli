@@ -5,8 +5,8 @@ import com.flowerstore.model.*;
 import java.util.Scanner;
 
 /**
- * Main 클래스는 사용자와의 상호작용을 처리하는 메인 클래스입니다.
- * 사용자의 입력을 받아 꽃 주문을 처리합니다.
+ * Main 클래스는 사용자와의 상호작용을 처리하는 메인 클래스
+ * 사용자의 입력을 받아 꽃 주문을 처리
  */
 public class Main {
     public static void main(String[] args) {

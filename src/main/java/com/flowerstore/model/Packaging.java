@@ -2,7 +2,7 @@ package com.flowerstore.model;
 
 /**
  * Packaging 클래스는 Product 클래스를 상속받으며,
- * 추가 포장 옵션을 나타내는 클래스입니다.
+ * 추가 포장 옵션을 나타내는 클래스
  */
 public class Packaging extends Product {
     private boolean isAdditionalPackaging;

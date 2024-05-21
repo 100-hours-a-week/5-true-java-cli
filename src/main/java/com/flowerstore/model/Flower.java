@@ -1,8 +1,8 @@
 package com.flowerstore.model;
 
 /**
- * Flower 클래스는 꽃의 정보를 관리하는 클래스입니다.
- * 꽃의 종류, 수량, 다발 여부를 포함합니다.
+ * Flower 클래스는 꽃의 정보를 관리하는 클래스
+ * 꽃의 종류, 수량, 다발 여부를 포함
  */
 public class Flower {
     private String type;
