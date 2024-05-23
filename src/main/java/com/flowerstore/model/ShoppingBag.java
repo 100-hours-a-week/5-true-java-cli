@@ -6,14 +6,16 @@ package com.flowerstore.model;
  */
 public class ShoppingBag extends Product {
 
+    // ShoppingBag 객체를 초기화
     public ShoppingBag(String type) {
-        super(type);
+        super(type); // Product 의 생성자를 호출
     }
 
+    // s=ShoppingBag 객체으 문자열 표현을 반환
     @Override
     public String toString() {
         return "ShoppingBag{" +
-                "type='" + getType() + '\'' +
+                "type='" + getType() + '\'' + // 상품 유형을 문자열로 반환
                 '}';
     }
 }

@@ -10,50 +10,52 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // 사용자 입력을 받기 위한 Scanner 객체 생성
 
         System.out.println("안녕하세요! 트루 꽃가게에 오신걸 환영합니다\uD83D\uDE0A");
 
         // 꽃 종류 선택
         System.out.println("원하는 꽃을 골라주세요 (1: \uD83C\uDF39장미\uD83C\uDF39, 2: \uD83C\uDF37튤립\uD83C\uDF37, 3: \uD83C\uDF3B해바라기\uD83C\uDF3B, 4: \uD83E\uDEBB하이신스\uD83E\uDEBB): ");
-        int flowerChoice = scanner.nextInt();
-        String flowerType = switch (flowerChoice) {
+        int flowerChoice = scanner.nextInt(); // 사용자로부터 꽃 종류를 입력 받음
+        String flowerType = switch (flowerChoice) { // 사용자가 선택한 번호에 따라 꽃 종류를 설정
             case 1 -> "장미";
             case 2 -> "튤립";
             case 3 -> "해바라기";
             case 4 -> "하이신스";
-            default -> throw new IllegalArgumentException("잘못된 선택입니다.");
+            default -> throw new IllegalArgumentException("잘못된 선택입니다."); // 잘못된 입력 처리
         };
 
         // 다발 또는 송이 선택
         System.out.println("다발이면 1, 송이면 2를 입력하세요: ");
-        boolean isBouquet = scanner.nextInt() == 1;
+        boolean isBouquet = scanner.nextInt() == 1; // 다발 여부를 사용자로부터 입력받음
 
         // 수량 입력
         System.out.println("수량을 입력하세요: ");
-        int quantity = scanner.nextInt();
+        int quantity = scanner.nextInt(); // 꽃의 수량을 사용자로부터 입력 받음
 
         Flower flower = new Flower(flowerType, quantity, isBouquet);
 
         // 쇼핑백 또는 바구니 선택
         System.out.println("쇼핑백이면 1, 바구니면 2를 입력하세요: ");
-        String packagingType = scanner.nextInt() == 1 ? "쇼핑백" : "바구니";
+        String packagingType = scanner.nextInt() == 1 ? "쇼핑백" : "바구니"; // 포장 유형을 사용자로부터 입력받음
 
         // 포장 추가 여부
         System.out.println("포장을 추가하시겠습니까? (Y/N): ");
-        boolean isPackaged = scanner.next().equalsIgnoreCase("Y");
+        boolean isPackaged = scanner.next().equalsIgnoreCase("Y"); // 포장 추가 여부를 사용자로부터 입력 받음
         String packagingDetail = "";
 
-        if (isPackaged) {
+        if (isPackaged) { // 포장을 추가하는 경우
             System.out.println("편지지면 1, 꽃말 카드면 2를 입력하세요: ");
-            packagingDetail = scanner.nextInt() == 1 ? "편지지" : "꽃말 카드";
+            packagingDetail = scanner.nextInt() == 1 ? "편지지" : "꽃말 카드"; // 포장 세부 사항을 사용자로부터 입력받음
         }
 
+        // Order 객체를 생성
         Order order = new Order(flower, packagingType, isPackaged, packagingDetail);
 
         // 주문 정보 출력
         System.out.println("트루 꽃가게를 이용해 주셔서 감사합니다! \uD83C\uDF38향기로운 하루 되세요\uD83C\uDF38");
 
+        // 주문 정보를 풀력
         System.out.println("주문 정보: " + order);
     }
 }
