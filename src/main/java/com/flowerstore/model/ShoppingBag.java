@@ -11,7 +11,7 @@ public class ShoppingBag extends Product {
         super(type); // Product 의 생성자를 호출
     }
 
-    // s=ShoppingBag 객체으 문자열 표현을 반환
+    // ShoppingBag 객체으 문자열 표현을 반환
     @Override
     public String toString() {
         return "ShoppingBag{" +

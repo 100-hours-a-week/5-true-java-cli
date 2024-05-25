@@ -4,8 +4,6 @@ package com.flowerstore.model;
  * Flower 클래스는 꽃의 정보를 관리하는 클래스
  * 꽃의 종류, 수량, 다발 여부를 포함
  */
-
-
 public class Flower {
     private String type; // 꽃의 종류를 저장하는 속성
     private int quantity; // 꽃의 수량을 저장하는 속성
@@ -13,12 +11,15 @@ public class Flower {
 
     // Flower 객체를 초기화
     public Flower(String type, int quantity, boolean isBouquet) {
+        if (quantity <= 0) { //  수량이 0보다 작거나 같으면 예외를 던짐
+            throw new IllegalArgumentException("수량은 0보다 큰 자연수여야 합니다.");
+        }
         this.type = type; // 꽃의 종류를 설정
         this.quantity = quantity; // 꽃의 수량을 설정
         this.isBouquet = isBouquet; // 꽃이 다발인지 여부를 설정
     }
 
-    // 꽃의 종류 반환
+    // 꽃의 종류를 반환
     public String getType() {
         return type;
     }
@@ -35,6 +36,9 @@ public class Flower {
 
     // 꽃의 수량을 설정
     public void setQuantity(int quantity) {
+        if (quantity <= 0) { //수량이 0보다 작거나 같으면 예외를 던짐
+            throw new IllegalArgumentException("수량은 0보다 큰 자연수여야 합니다.");
+        }
         this.quantity = quantity;
     }
 
@@ -48,7 +52,7 @@ public class Flower {
         isBouquet = bouquet;
     }
 
-    // Flower 객체의 문자열 번환
+    // Flower 객체의 문자열 변환
     @Override
     public String toString() {
         return "Flower{" +
