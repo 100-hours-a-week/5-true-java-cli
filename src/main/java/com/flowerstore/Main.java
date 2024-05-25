@@ -18,7 +18,7 @@ public class Main {
             System.out.println("안녕하세요! 트루 꽃가게에 오신걸 환영합니다😊");
 
             // 꽃 종류 선택
-            System.out.println("원하는 꽃을 골라주세요 (1: 🌹장미🌹, 2: 🌷튤립🌷, 3: 🌻해바라기🌻, 4: 🌼하이신스🌼): ");
+            System.out.println("원하는 꽃을 골라주세요 (1: 🌹장미🌹, 2: 🌷튤립🌷, 3: 🌻해바라기🌻, 4: 🪻하이신스🪻): ");
             int flowerChoice = scanner.nextInt(); // 사용자로부터 꽃 종류를 입력받음
             String flowerType = switch (flowerChoice) { // 사용자가 선택한 번호에 따라 꽃 종류를 설정
                 case 1 -> "장미"; // 선택된 번호가 1인 경우 "장미"로 설정
